@@ -1,6 +1,6 @@
 # Vue-Uikit
 
-通用的 Vue 组件库模板，也是组件脚手架，基于 @vue/cli@3.x 和 vuepress 搭建。
+通用的 Vue 组件库模板，基于 @vue/cli@3.x 和 vuepress 搭建。
 
 
 ## 快速使用
