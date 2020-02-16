@@ -10,7 +10,7 @@ module.exports = {
   description: '基于 Vue 的通用组件库模板',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.png' }],
   ],
   dest: './dist',
   port: 8686,

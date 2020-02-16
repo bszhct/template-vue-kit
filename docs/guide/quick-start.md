@@ -41,7 +41,7 @@ Vue.use(VueUikit)
 module.exports = {
   configureWebpack: {
     externals: {
-      'vue': 'Vue'
+      'VueUikit': 'vue-uikit'
     }
   }
 }
