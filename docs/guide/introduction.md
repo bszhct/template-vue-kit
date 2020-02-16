@@ -1,6 +1,6 @@
 ## 模板说明
 
-通用的 Vue 组件库模板，基于 @vue/cli@3.x 和 vuepress 搭建。
+通用的 Vue 组件库模板，基于 @vue/cli@4.x 和 vuepress 搭建。
 
 
 ## 模板特点

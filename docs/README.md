@@ -10,5 +10,5 @@ features:
   details: 零配置使用，无需关注脚手架细节
 - title: 轻松上手
   details: 完整的文档和使用姿势
-footer: Copyright © 2018 present bszhct
+footer: Copyright © 2019 present bszhct
 ---
