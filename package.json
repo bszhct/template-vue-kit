@@ -1,5 +1,5 @@
 {
-  "name": "@bszhct/template-vue-component",
+  "name": "@bszhct/template-vue-kit",
   "version": "1.0.0",
   "description": "通用的 Vue 组件库模板",
   "scripts": {
