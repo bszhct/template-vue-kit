@@ -19,7 +19,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: '使用说明', link: '/guide/introduction' },
-      { text: '文档', link: '/components/spin' }
+      { text: '文档', link: '/components/button' }
     ],
     // 侧边栏设置
     sidebar: {
