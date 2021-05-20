@@ -19,34 +19,29 @@ title: Button 加载
 
 ## API
 
-<layout-table title="Attributes" :tableColumns="tableColumns" :tableData="tableData">
-</layout-table>
+<layout-table title="Attributes" :columns="columns" :dataSource="dataSource"></layout-table>
 
-[查看更多 API 属性](https://www.antdv.com/components/button-cn/#api)
-
+**其他更多 API，请移步[传送门](https://www.antdv.com/components/button-cn/#API)**
 
 <script>
   export default {
     data() {
       return { 
-        tableColumns: ['参数', '说明', '类型', '可选值', '默认值'],
-        tableData: [{
-          0: 'className',
-          1: '类名',
-          2: 'String',
-          3: '-',
-          4: '-'
-        }, {
+        columns: ['参数', '说明', '类型', '可选值', '默认值'],
+        dataSource: [{
           0: 'disabled',
           1: '按钮失效状态',
-          2: 'Boolean',
-          3: 'true, false',
+          2: 'boolean',
+          3: 'true/false',
+          4: 'false'
+        }, {
+          0: 'loading',
+          1: '设置按钮载入状态',
+          2: 'boolean | {delay: number}',
+          3: '--',
           4: 'false'
         }]
       }
-    },
+    }
   }
 </script>
-
-<style>
-</style>

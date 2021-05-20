@@ -3,6 +3,7 @@
     <slot></slot>
   </a-button>
 </template>
+
 <script>
 export default {
   name: 'vue-button'

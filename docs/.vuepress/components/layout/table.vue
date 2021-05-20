@@ -1,42 +1,74 @@
 <template>
-  <a-locale-provider :locale="locale">
-    <div class="layout-table-wrap">
-      <h3>{{title}}</h3>
-      <a-table v-bind="$attrs" v-on="$listeners" :dataSource="getTableData" :columns="getTableColumns" className="api-table-main" :bordered="false" :pagination="false" />
+  <div class="layout-table-wrap" ref="layoutTable">
+    <h3>{{title}}</h3>
+    <div v-if="description" class="description">
+      {{description}}
     </div>
-  </a-locale-provider>
+    <a-table rowKey="key" v-bind="$attrs" v-on="$listeners" :dataSource="records" :columns="recordColumns" :loading="loading" :pagination="false">
+    </a-table>
+  </div>
 </template>
 
 <script>
-import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN'
-
 export default {
-  name: 'layout-table',
   props: {
+    type: {
+      type: String,
+      default: 'attr'
+    },
     title: {
       type: String,
       default: '属性'
     },
-    tableData: Array,
-    tableColumns: Array
+    description: {
+      type: String,
+      default: ''
+    },
+    columns: {
+      type: Array,
+      default: () => []
+    },
+    dataSource: {
+      type: Array,
+      default: () => []
+    }
   },
   data () {
+    const recordColumns = this.columns.map((title, dataIndex) => ({
+      title,
+      dataIndex
+    }))
+    const records = this.dataSource.map((item, key) => ({
+      key,
+      ...item
+    }))
     return {
-      locale: zhCN
+      recordColumns,
+      records,
+      loading: true
     }
   },
-  computed: {
-    getTableColumns() {
-      return this.tableColumns.map((title, key) => ({key, width: `${1 / this.tableColumns.length}%`, title, dataIndex: key}))
-    },
-    getTableData() {
-      return this.tableData.map((item, key) => ({key, ...item}))
-    }
+  mounted () {
+    const rect = this.$refs.layoutTable.getBoundingClientRect()
+    const width = `${rect.width / this.recordColumns.length}px`
+
+    this.recordColumns = this.recordColumns.map(item => ({
+      ...item,
+      width
+    }))
+    this.loading = false
   }
 }
 </script>
 
-<style lang="stylus">
-.layout-table-wrap
-  padding 40px 0
+<style lang="less">
+.layout-table-wrap {
+  width: 100%;
+  padding: 30px 0;
+
+  .description {
+    color: #666666;
+    padding-bottom: 16px;
+  }
+}
 </style>

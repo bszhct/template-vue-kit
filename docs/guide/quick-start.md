@@ -18,9 +18,9 @@ Vue.use(VueUikit)
 ## 使用
 
 ```vue
-<vue-loading :loading="true">
-  <div>这里面的内容在设置 loading 为 false 时展示</div>
-</vue-loading>
+<vue-spin :spinning="true">
+  <div>这里面的内容在设置 spinning 为 false 时展示</div>
+</vue-spin>
 ```
 
 

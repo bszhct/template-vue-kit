@@ -10,16 +10,17 @@
   },
   "main": "lib/vue-uikit.umd.min.js",
   "dependencies": {
-    "ant-design-vue": "1.4.10",
+    "ant-design-vue": "1.7.4",
+    "core-js": "2.6.11",
     "highlight.js": "9.17.1",
     "vue": "2.6.11",
     "vue-highlight.js": "3.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.1.2",
-    "@vue/cli-plugin-eslint": "4.1.2",
-    "@vue/cli-plugin-router": "4.1.2",
-    "@vue/cli-service": "4.1.2",
+    "@vue/cli-plugin-babel": "3.11.0",
+    "@vue/cli-plugin-eslint": "3.11.0",
+    "@vue/cli-plugin-router": "4.3.1",
+    "@vue/cli-service": "3.11.0",
     "@vue/eslint-config-standard": "4.0.0",
     "@vuepress/plugin-back-to-top": "1.2.0",
     "@vuepress/plugin-medium-zoom": "1.2.0",
@@ -27,10 +28,15 @@
     "eslint": "5.16.0",
     "eslint-plugin-vue": "5.0.0",
     "lint-staged": "9.5.0",
-    "stylus": "0.54.7",
-    "stylus-loader": "3.0.2",
+    "less": "3.9.0",
+    "less-loader": "4.1.0",
     "vue-template-compiler": "2.6.11",
-    "vuepress": "1.2.0"
+    "vuepress": "1.5.0",
+    "vuepress-theme-antdocs": "1.1.1"
+  },
+  "resolutions": {
+    "watchpack": "1.6.1",
+    "vue-server-renderer": "2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -41,7 +47,9 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
-    "rules": {},
+    "rules": {
+      "no-unused-vars": "warn"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

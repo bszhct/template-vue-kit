@@ -13,7 +13,7 @@
       <slot name="codeText"></slot>
     </div>
     <div v-if="$slots.codeText" class="code-button">
-      <div @click="handleToggleShow" class="code-show">
+      <div @click="onToggleShow" class="code-show">
         {{codeTextBtn}}
       </div>
     </div>
@@ -33,7 +33,7 @@ export default {
     }
   },
   methods: {
-    handleToggleShow () {
+    onToggleShow () {
       this.isShow = !this.isShow
       this.codeTextBtn = this.isShow ? '隐藏代码' : '显示代码'
     }
@@ -41,52 +41,63 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.layout-code-box-wrap
-  padding 40px 0
-  .code-title
-    .title
-      padding 0
-      margin 0
-      border-bottom none
-      font-size 18px
-    .description
-      font-size 14px
-      display inline-block
-      margin 10px 0
-      color #5e6d82
-  .code-demo
-    border 1px solid #ebebeb
-    border-bottom none
-    border-radius 3px
-    box-shadow 0 0 2px 0 rgba(232, 237, 250, 0.6), 0 1px 2px 0 rgba(232, 237, 250, 0.5)
-    .code-content
-      display flex
-      justify-content center
-      align-items center
-      box-sizing border-box
-      padding 4%
-      border-bottom 1px solid #ddd
-  .code-button
-    position relative
-    background #fafbfc
-    color #409eff
-    font-weight 400
-    line-height 40px
-    text-align center
-    cursor pointer
-    box-shadow 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5)
-    .code-show
-      text-align center
-      transition all 0.15s
-      &:hover
-        font-size 17px
-    .code-online
-      position avueolute
-      top 0
-      right 0
-      padding-left 5px
-      padding-right 25px
-    .code-online:hover
-      font-size 17px
+<style lang="less" scoped>
+.layout-code-box-wrap {
+  padding: 20px 0;
+
+  .code-title {
+    .title {
+      padding: 0;
+      margin: 0;
+      border-bottom: none;
+      font-size: 18px;
+    }
+    .description {
+      font-size: 14px;
+      display: inline-block;
+      margin: 10px 0;
+      color: #5e6d82;
+    }
+  }
+
+  .code-demo {
+    border: 1px solid #ebebeb;
+    border-bottom: none;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(232, 237, 250, 0.6), 0 1px 2px 0 rgba(232, 237, 250, 0.5);
+    .code-content {
+      box-sizing: border-box;
+      padding: 4%;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  .code-button {
+    position: relative;
+    background: #fafbfc;
+    color: #409eff;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
+    .code-show {
+      text-align: center;
+      transition: all 0.15s;
+      &:hover {
+        font-size: 17px;
+      }
+    }
+    .code-online {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 5px;
+      padding-right: 25px;
+    }
+    .code-online:hover {
+      font-size: 17px;
+    }
+  }
+}
 </style>

@@ -7,7 +7,7 @@
 
 1、开箱即用，不用过多的关注配置，专注于自身的组件开发
 
-2、 文档格式参照 [vuepress 官网](https://vuepress.vuejs.org/zh/)，不是很好看，也不算太丑。。
+2、 文档格式参照 [vuepress 官网](https://vuepress.vuejs.org/zh/)，不是很好看，也不算太丑。。。
 
 3、组件使用 @vue/cli 一键打包，方便快捷
 

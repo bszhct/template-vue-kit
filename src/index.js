@@ -1,8 +1,8 @@
-import VueLoading from './loading'
+import VueSpin from './spin'
 import VueButton from './button'
 
 const components = [
-  VueLoading,
+  VueSpin,
   VueButton
 ]
 
@@ -17,7 +17,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
+  version: '1.0.0',
   install,
-  VueLoading,
+  VueSpin,
   VueButton
 }

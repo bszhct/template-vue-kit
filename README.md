@@ -1,4 +1,4 @@
-# Vue-Uikit
+# VUE-UIKIT
 
 通用的 Vue 组件库模板，基于 @vue/cli@4.x 和 vuepress 搭建。
 
